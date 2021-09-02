@@ -5,7 +5,8 @@ const accordionContent = [
     img: "vffunland.png",
     body: "I kind of got a bit obsessed with <a href='https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Fonts/Variable_Fonts_Guide' target='_blank'>variable fonts</a> and wanted a way to play with their variable properties in a way that ... er ... varies over the course of a word or phrase. Is that a confusing mouthful? Just play with the app and you'll understand.</p><p><a href='https://github.com/fraserpage/Variable-Font-Funland' target='_blank'>Check out my code on GitHub.</a>",
     link: "https://vffunland.herokuapp.com/",
-    linkText: "Check it out (this is running on Heroku's free tier so be patient while it spins up).",
+    linkText: "Check it out",
+    linkNote:"(This is running on Heroku's free tier so be patient while it spins up.)",
     tags: ""
   },
   {
@@ -13,7 +14,8 @@ const accordionContent = [
     img: "gifts.png",
     body: "Every year my family, like many others, exchanges Christmas gifts. And every year I struggle to keep track of all the emails about what people would like and who has already got what for who. This app aims to solve that problem.</p><p>It's built with Express/Node with EJS templating, Mongo/Mongoose, Passport/Google OAuth for user authentication and Nodemailer with Sendgrid for emails.</p><p>Next steps: some of the forms here are in desperate need of AJAXification. </p><p><a href='https://github.com/fraserpage/gift-list-app' target='_blank'>Check out my code on GitHub.</a>",
     link: "https://giftlists-app.herokuapp.com/",
-    linkText: "Check it out (this is running on Heroku's free tier so be patient while it spins up). Don't be to shy to sign up for an account!",
+    linkText: "Check it out",
+    linkNote:"Don't be too shy to sign up for an account! (Also, This is running on Heroku's free tier so be patient while it spins up.)",
     tags: ""
   },
   {
@@ -21,7 +23,8 @@ const accordionContent = [
     img: "sandwich.png",
     body: "In 2010 I had an idea that it might be fun to slice up pictures of my face and let people slide them around to make new configurations. I was right, <a href='https://fraserpage.github.io/faces2010/' target='_blank'>it was fun.</a> </p><p>11 years later, I pitched redoing this as a full CRUD app that would let users upload photos and make their own face mashups. This was a group project. I created the initial wireframes and design specifications for the site and took on building the front and backend functions for the photo upload tool and 3D spinning block gizmo that sits at the heart of the site. </p><p> Next steps: The spinning cube is really crying out to be swipable. ",
     link: "https://open-face-sandwich.herokuapp.com/",
-    linkText: "Check it out (this is running on Heroku's free tier so be patient while it spins up)",
+    linkText: "Check it out",
+    linkNote:"(This is running on Heroku's free tier so be patient while it spins up.)",
     tags: ""
   },
   {
@@ -124,6 +127,7 @@ accordionContent.forEach(entry =>{
         <p><a href='${entry.link}' target='_blank'>
           ${entry.linkText}
         </a></p>
+        ${entry.linkNote ? `<p class="link-note">${entry.linkNote}</p>` : ``}
       </div>
       <div class='accordion-right'>
         <img src='images/${entry.img}'>

@@ -70,6 +70,11 @@ p {
 p.lots-a-space{
   margin: 1em 0 2em;
 }
+p.link-note{
+  margin-top: -0.8rem;
+  font-size: 90%;
+  font-style: italic;
+}
 button{
   cursor: pointer;
   border:0;
