@@ -78,7 +78,7 @@ const accordionContent = [
   {
     title: "A year-in-review Wordpress mini-site",
     img: "2019.png",
-    body: "I've been making fun 'year-in-review' websites and projects for Iler Campbell for a good while now (feel free to hack the url to get yourself all the way back to 2015.). This is running on Wordpress using ACF for content management. </p><p>I built something really cool for 2020 but was off on leave at year end and am regretful that it didn't get launched. You'll have to check back in a few months to see it relaunched for 2021.",
+    body: "I've been making fun 'year-in-review' websites and projects for Iler Campbell for a good while now (feel free to hack the url to get yourself all the way back to 2015.). This is running on Wordpress using ACF for content management. I think the coolest bit is the slideshow animation.</p><p>I built something really cool for 2020 but was off on leave at year end and am regretful that it didn't get launched. You'll have to check back in a few months to see it relaunched for 2021.",
     link: "https://ilercampbell.com/2019/",
     linkText: "Check out the filter page here.",
     tags: "Wordpress, ACF"
