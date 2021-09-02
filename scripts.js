@@ -44,7 +44,7 @@ const accordionContent = [
     tags: ""
   },
   {
-    title: "An 11ty static site building Netlify CMS",
+    title: "An 11ty static site with Netlify CMS",
     img: "ai.png",
     body: "This project is not quite live yet. It's built with Netlify CMS, Eleventy static site generator, with templates in Nunjucks, running on Netlify. I'm a big believer in modular systems, so this is all built using Netlify CMS's 'variable type' list widget which enables a page-builder type experience. ",
     link: "https://agnewiler.netlify.app/",
