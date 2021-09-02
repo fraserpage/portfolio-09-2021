@@ -135,7 +135,7 @@ dt img{
 .accordion-right img{
   transition: transform 0.8s;
   transform: scale(0);
-  transform-origin: left top;
+  transform-origin: right top;
 }
 dt.open + dd .accordion-right img{
   transform: scale(1)
