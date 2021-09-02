@@ -1,7 +1,4 @@
-# General Assembly Admissions tasks
-The "My personal site" project lives at index.html
--- I'll likely adapt this to be my actual personal site 
+# Hi! This is my portfolio site. 
+Consider it a v0.1. It need some fun features!
 
-The build-your-own-blog-theme task is at blog.html
-
-[Vist my personal site](https://fraserpage.github.io/FP-GA-admissions/)
+Deployed at [fraser.page](https://fraser.page). A very nice domain if I may say so myself. 
