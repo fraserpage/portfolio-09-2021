@@ -54,7 +54,7 @@ const accordionContent = [
   {
     title: "An annual report mini-site as a Wordpress plugin",
     img: "woodgreen.png",
-    body: "Despite the 'mini-site' label this site is actually quite large. It was developed as a Wordpress plugin so as not to require monkeying with Woodgreen's current theme. It utilizes <a href='https://www.advancedcustomfields.com/' target='_blank'>ACF</a> flexible fields to provide a page-builder like functionality on the backend.",
+    body: "Despite the 'mini-site' label this site is actually quite large. It was developed as a Wordpress plugin so as not to require monkeying with Woodgreen's current theme. It utilizes <a href='https://www.advancedcustomfields.com/' target='_blank'>ACF</a> flexible fields to provide a page-builder like functionality on the backend. </p><p>Design by <a href='https://rallyrally.design' target='_blank' rel='nofollow'>Rally Rally</a>.",
     link: "https://www.woodgreen.org/about-us/annual-reports/2019-20/governance-update-woodgreen-foundation/",
     linkText: "This is my favourite page. Fun animating charts!",
     tags: "Wordpress, Wordpress plugin, Animation, Design by Rally Rally"
@@ -70,7 +70,7 @@ const accordionContent = [
   {
     title: "A big modular Wordpress site",
     img: "cv.png",
-    body: "Likely takes the crown for the biggest site I've created. Every piece of this site is an <a href='https://www.advancedcustomfields.com/' target='_blank'>ACF</a> flexible field, which makes this an incredibly flexible site on the backend. The centrepiece, in my mind is the robust 'filter' feature on the Community page which lets you sort through a huge number of 'business cards' via AJAX.",
+    body: "Likely takes the crown for the biggest site I've created. Every piece of this site is an <a href='https://www.advancedcustomfields.com/' target='_blank'>ACF</a> flexible field, which makes this an incredibly flexible site on the backend. The centrepiece, in my mind is the robust 'filter' feature on the Community page which lets you sort through a huge number of 'business cards' via AJAX. </p><p>Design by <a href='https://rallyrally.design' target='_blank' rel='nofollow'>Rally Rally</a>.",
     link: "https://climateventures.org/community/",
     linkText: "Check out the filter page here.",
     tags: "Wordpress, AJAX"
@@ -86,7 +86,7 @@ const accordionContent = [
   {
     title: "A patched up Squarespace site",
     img: "schools.png",
-    body: "This is a Squarespace website that I was called into help with. On the CSS side, the most exciting bit is the fairly complicated underline effect on the main headings. These are created with a precisely defined repeating linear gradient background.</p><p>Squarespace has no support for multilingual sites, which this is. To make the header and footer change to match the language of the page I'm using javascript to read the site url and then swap in the correct elements based on the page belonging to the 'en' or 'fr' part of the site.</p><p>On the 'Resources' page I AJAX in the next page of resources right away to get around Squarespace's limit on the number of blog posts that a page can show at once. Any further posts (if they exist) can be AJAX'd in by clicking on a button at the bottom. </p><p>The 'Resources' are also filterable but Squarespace's filter widget is confoundingly dumb. It gives no indication of what the current filter state is. To fix this, I parse the url again and write a title based on this. I also made the filter load posts by AJAX to prevent a confusing page reload.",
+    body: "This is a Squarespace website that I was called into help with. On the CSS side, the most exciting bit is the fairly complicated underline effect on the main headings. These are created with a precisely defined repeating linear gradient background.</p><p>Squarespace has no support for multilingual sites, which this is. To make the header and footer change to match the language of the page I'm using javascript to read the site url and then swap in the correct elements based on the page belonging to the 'en' or 'fr' part of the site.</p><p>On the 'Resources' page I AJAX in the next page of resources right away to get around Squarespace's limit on the number of blog posts that a page can show at once. Any further posts (if they exist) can be AJAX'd in by clicking on a button at the bottom. </p><p>The 'Resources' are also filterable but Squarespace's filter widget is confoundingly dumb. It gives no indication of what the current filter state is. To fix this, I parse the url again and write a title based on this. I also made the filter load posts by AJAX to prevent a confusing page reload. </p><p>Design by <a href='https://rallyrally.design' target='_blank' rel='nofollow'>Rally Rally</a>.",
     link: "https://www.healthyschoolsalliance.ca/en/resources/",
     linkText: "Check out the Resources page.",
     tags: "Squarespace, AJAX, Tricky CSS, Multilingual"
@@ -94,7 +94,7 @@ const accordionContent = [
   {
     title: "A Multilingual Wordpress Gutenberg site",
     img: "meck.png",
-    body: "This fairly simple site is built entirely on Wordpress' Gutenberg editor, making for a flexible component based site with a fully WYSIWYG editor experience. The multilingual logic is all custom code. A lot of attention was paid to accessibility on this site.",
+    body: "This fairly simple site is built entirely on Wordpress' Gutenberg editor, making for a flexible component based site with a fully WYSIWYG editor experience. The multilingual logic is all custom code. A lot of attention was paid to accessibility on this site. </p><p>Design by <a href='https://rallyrally.design' target='_blank' rel='nofollow'>Rally Rally</a>.",
     link: "https://meckplaybook.com/plan-updates/",
     linkText: "This page has a fun little timeline slider thing.",
     tags: "Wordpress, Gutenberg, Multilingual"
@@ -102,7 +102,7 @@ const accordionContent = [
   {
     title: "A fully custom Squarespace site",
     img: "book.png",
-    body: "This commerce site is running on Squarespace's 'Developer' platform which allows for <i>almost</i> fully custom themes. The latest version of Squarespace has retired the developer platform which I think was the right call on their part.",
+    body: "This commerce site is running on Squarespace's 'Developer' platform which allows for <i>almost</i> fully custom themes. </p><p>Design by Kaila Jacques.",
     link: "https://www.heresmybook.com/",
     linkText: "Check it out",
     tags: "Squarespace, Squarespace Developer Platform"
