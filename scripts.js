@@ -31,7 +31,7 @@ const accordionContent = [
     title: "Conway's Game of Life: The Game",
     img: "game.png",
     body: "I wondered if I could turn John Conway's Game of Life algorithm into an actual multiplayer game. In search of that, I wrote up some proposed rules and made a super customizable, DOM based, vanilla JS implementation of the Game, complete with a drag and drop 'library' of interesting patterns. </p><p>In the end, I hardly felt the need to 'play' any games with this. It's just super fun to mess around with. </p><p>Next steps: the intro/settings screen is a little overwhelming and would be well served by a bit of slimming down and maybe recommending sets of settings to users instead of forcing them to choose them all. I'd also love to give users to option of adding their own patterns to the library. Finally, it needs a reset button. </p><p><a href='https://github.com/fraserpage/the-game-of-life-the-game' target='_blank'>Check out my code on GitHub.</a>",
-    link: "https://fraserpage.github.io/ResizableTicTacToe/",
+    link: "https://fraserpage.github.io/the-game-of-life-the-game/",
     linkText: "Check it out.",
     tags: ""
   },
