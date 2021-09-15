@@ -136,17 +136,11 @@ accordionContent.forEach(entry =>{
 })
 accordion.innerHTML = accordionHTML;
 
-/* Hover title and make something happen */ 
-// document.querySelector('h1').addEventListener('mouseenter', e => {
-//   console.log('hover')
-//   let textArr = e.target.innerText.split('')
-//   e.target.innerHTML = textArr.map((char,i)=>(
-//     `<span style='color:hsl(${360*i/textArr.length},100%,50%)'>${char}</span>`
-//   )).join('')
-// })
-// document.querySelector('h1').addEventListener('mouseleave', e => {
-//   e.target.innerHTML = e.target.innerText
-// })
+/* Make bg change on mouse move */
+window.addEventListener('mousemove', e => {
+  let combinedMousePosition = (e.clientX/window.innerWidth + e.clientY/window.innerHeight)/2
+  document.body.style.background = `hsl(${45*combinedMousePosition+150},100%,50%)`
+})
 
 /* Read more button */ 
 document.getElementById('readmore').addEventListener('click', () =>{
