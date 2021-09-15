@@ -5,6 +5,12 @@
   margin: 0 auto;
   padding: 10vw 5vw;
 }
+header,
+main {
+  max-width: 1500px;
+  margin-left: auto;
+  margin-right: auto;
+}
 @media screen and (min-width:600px){
   body{
     font-size:19px;
@@ -29,7 +35,6 @@ header {
     column-span: all;
   }
 }
-
 img{
   width: 100%;
 }
