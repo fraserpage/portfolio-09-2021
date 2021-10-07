@@ -30,7 +30,7 @@ const accordionContent = [
   {
     title: "A fun little React app for exploring Mars Rover photos",
     img: "rover.png",
-    body: "This little React app lets you explore NASA's Mars Rover photo API. Select a Rover, select a mission day, see photos and optionally filter by the camera used. Each photo has a like button that you can click if you like, though likes are not saved to any database.</p><p><a href='https://github.com/fraserpage/Spacestagram' target='_blank'>Check out the code on GitHub.</a>",
+    body: "This little React app lets you explore NASA's Mars Rover photo API. Select a Rover, select a mission day: see photos. You can optionally filter by the camera used and change the number of photos per page. Each photo has a like button that you can click if you like, though likes are not saved to any database. The photos have a fun css animation as a loading state. Clicking on a photo opens it in lightbox mode.  </p><p>Next steps: adding in React Router would to linking to specific pages or photos. It'd also be nice if those like buttons were hooked up to a DB.</p><p><a href='https://github.com/fraserpage/Spacestagram' target='_blank'>Check out the code on GitHub.</a>",
     link: "https://fraserpage.github.io/Spacestagram/",
     linkText: "Check it out",
     linkNote:"",
