@@ -131,8 +131,8 @@ dt img{
   transition: transform 0.8s;
   transform-origin: right center;
   margin-left: auto;
-  margin-top: clamp(0.5em,1.5vw,1em);
-  margin-bottom: clamp(0.5em,1.5vw,1em);
+  margin-top: clamp(0.5em,2vw,1.2em);
+  margin-bottom: clamp(0.5em,2vw,1.2em);
 }
 .active dt:hover img {
   transform: scale(1.5);
