@@ -127,10 +127,12 @@ dt h3{
   margin-right:2rem;
 }
 dt img{
-  width: 6rem;
+  width: clamp(6rem,12vw,14rem);
   transition: transform 0.8s;
   transform-origin: right center;
   margin-left: auto;
+  margin-top: clamp(0.5em,1.5vw,1em);
+  margin-bottom: clamp(0.5em,1.5vw,1em);
 }
 .active dt:hover img {
   transform: scale(1.5);
