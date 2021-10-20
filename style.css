@@ -155,6 +155,8 @@ dl.active dt:hover {
   outline:none;
 }
 dd {
+  display: flex;
+  flex-direction: column;
   margin: 0;
   transition: height .5s ease;
   overflow: hidden;
@@ -165,25 +167,29 @@ dd > :last-child{
 }
 
 .accordion-right {
+  order: 1;
   margin-top: 1rem;
   margin-bottom: 1.5rem
 }
 .accordion-left {
+  order: 2;
   margin-bottom: 1.5rem
 }
 
 @media screen and (min-width: 600px) {
+  
   dd {
-    display: flex;
+    flex-direction: row;
   }
 
   .accordion-right {
+    order: 2;
     flex: 0 0 50%;
-    order: 1;
     margin-left: 10%;
   }
 
   .accordion-left {
+    order: 1;
     display: flex;
     flex-direction: column;
     align-self: stretch;
