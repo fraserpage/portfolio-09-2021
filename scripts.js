@@ -64,7 +64,7 @@ const accordionContent = [
     title: "An annual report mini-site as a Wordpress plugin",
     img: "woodgreen.png",
     body: "Despite the 'mini-site' label this site is actually quite large. It was developed as a Wordpress plugin so as not to require monkeying with Woodgreen's current theme. It utilizes <a href='https://www.advancedcustomfields.com/' target='_blank'>ACF</a> flexible fields to provide a page-builder like functionality on the backend. </p><p>Design by <a href='https://rallyrally.design' target='_blank' rel='nofollow'>RallyRally</a>.",
-    link: "https://www.woodgreen.org/about-us/annual-reports/2019-20/governance-update-woodgreen-foundation/",
+    link: "https://archive.woodgreen.org/about-us/annual-reports/2019-20/governance-update-woodgreen-foundation/",
     linkText: "This is my favourite page. Fun animating charts!",
     tags: "Wordpress, Wordpress plugin, Animation, Design by RallyRally"
   },
