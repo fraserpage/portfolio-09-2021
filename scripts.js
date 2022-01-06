@@ -61,12 +61,12 @@ const accordionContent = [
     tags: "Netlify, Design by me"
   },
   {
-    title: "An annual report mini-site as a Wordpress plugin",
+    title: "An annual report mini-site as a WordPress plugin",
     img: "woodgreen.png",
-    body: "Despite the 'mini-site' label this site is actually quite large. It was developed as a Wordpress plugin so as not to require monkeying with Woodgreen's current theme. It utilizes <a href='https://www.advancedcustomfields.com/' target='_blank'>ACF</a> flexible fields to provide a page-builder like functionality on the backend. </p><p>Design by <a href='https://rallyrally.design' target='_blank' rel='nofollow'>RallyRally</a>.",
+    body: "Despite the 'mini-site' label this site is actually quite large. It was developed as a WordPress plugin so as not to require monkeying with Woodgreen's current theme. It utilizes <a href='https://www.advancedcustomfields.com/' target='_blank'>ACF</a> flexible fields to provide a page-builder like functionality on the backend. </p><p>Design by <a href='https://rallyrally.design' target='_blank' rel='nofollow'>RallyRally</a>.",
     link: "https://archive.woodgreen.org/about-us/annual-reports/2019-20/governance-update-woodgreen-foundation/",
     linkText: "This is my favourite page. Fun animating charts!",
-    tags: "Wordpress, Wordpress plugin, Animation, Design by RallyRally"
+    tags: "WordPress, WordPress plugin, Animation, Design by RallyRally"
   },
   {
     title: "Firebase, fun forms and playful interactivity for my wedding website",
@@ -77,28 +77,28 @@ const accordionContent = [
     tags: "Fun Javascript, Firebase"
   },
   {
-    title: "A big modular Wordpress site",
+    title: "A big modular WordPress site",
     img: "cv.png",
     body: "Likely takes the crown for the biggest site I've created. Every piece of this site is an <a href='https://www.advancedcustomfields.com/' target='_blank'>ACF</a> flexible field, which makes this an incredibly flexible site on the backend. The centrepiece, in my mind is the robust 'filter' feature on the Community page which lets you sort through a huge number of 'business cards' via AJAX. </p><p>Design by <a href='https://rallyrally.design' target='_blank' rel='nofollow'>RallyRally</a>.",
     link: "https://climateventures.org/community/",
     linkText: "Check out the filter page here.",
-    tags: "Wordpress, AJAX"
+    tags: "WordPress, AJAX"
   },
   {
-    title: "A year-in-review Wordpress mini-site",
+    title: "A year-in-review WordPress mini-site",
     img: "2019.png",
-    body: "I've been making fun 'year-in-review' websites and projects for Iler Campbell for a good while now (feel free to hack the url to get yourself all the way back to 2015.). This is running on Wordpress using ACF for content management. I think the coolest bit is the slideshow animation.",
+    body: "I've been making fun 'year-in-review' websites and projects for Iler Campbell for a good while now (feel free to hack the url to get yourself all the way back to 2015.). This is running on WordPress using ACF for content management. I think the coolest bit is the slideshow animation.",
     link: "https://ilercampbell.com/2019/",
     linkText: "Check it out.",
-    tags: "Wordpress, ACF"
+    tags: "WordPress, ACF"
   },
   {
-    title: "A chat-themed year-in-review Wordpress mini-site",
+    title: "A chat-themed year-in-review WordPress mini-site",
     img: "IC2021.png",
-    body: "This was my most ambitious year-in-review site for Iler Campbell. The reactions feature is hooked up to the Wordpress REST API.",
+    body: "This was my most ambitious year-in-review site for Iler Campbell. The reactions feature is hooked up to the WordPress REST API.",
     link: "https://ilercampbell.com/2021/",
     linkText: "Check it out.",
-    tags: "Wordpress, Wordpress REST API, ACF"
+    tags: "WordPress, WordPress REST API, ACF"
   },
   {
     title: "A patched up Squarespace site",
@@ -109,12 +109,12 @@ const accordionContent = [
     tags: "Squarespace, AJAX, Tricky CSS, Multilingual"
   },
   {
-    title: "A Multilingual Wordpress Gutenberg site",
+    title: "A Multilingual WordPress Gutenberg site",
     img: "meck.png",
-    body: "This fairly simple site is built entirely on Wordpress' Gutenberg editor, making for a flexible component based site with a fully WYSIWYG editor experience. The multilingual logic is all custom code. A lot of attention was paid to accessibility on this site. </p><p>Design by <a href='https://rallyrally.design' target='_blank' rel='nofollow'>RallyRally</a>.",
+    body: "This fairly simple site is built entirely on WordPress' Gutenberg editor, making for a flexible component based site with a fully WYSIWYG editor experience. The multilingual logic is all custom code. A lot of attention was paid to accessibility on this site. </p><p>Design by <a href='https://rallyrally.design' target='_blank' rel='nofollow'>RallyRally</a>.",
     link: "https://meckplaybook.com/plan-updates/",
     linkText: "This page has a fun little timeline slider thing.",
-    tags: "Wordpress, Gutenberg, Multilingual"
+    tags: "WordPress, Gutenberg, Multilingual"
   },
   {
     title: "A fully custom Squarespace site",
