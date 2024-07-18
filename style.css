@@ -142,7 +142,7 @@ dt.open h3 {
   border-right-color: transparent;
 }
 dt img{
-  width: clamp(12rem,18vw,20rem);
+  width: clamp(6rem,33vw,40rem);
   transition: transform 0.8s;
   transform-origin: right center;
   margin-left: auto;
