@@ -1,30 +1,57 @@
 /* Portfolio content */
 const accordionContent = [
   {
-    title: "An React/Express JS app for playing with variable fonts",
-    img: "vffunland.png",
-    body: "I kind of got a bit obsessed with <a href='https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Fonts/Variable_Fonts_Guide' target='_blank'>variable fonts</a> and wanted a way to play with their variable properties in a way that ... er ... varies over the course of a word or phrase. Is that a confusing mouthful? Just play with the app and you'll understand.</p><p><a href='https://github.com/fraserpage/Variable-Font-Funland' target='_blank'>Check out my code on GitHub.</a>",
-    link: "https://vffunland.herokuapp.com/",
+    title: "A bold site for a bold initiative",
+    img: "translash.jpeg",
+    body: "TransLash tells trans stories to save trans lives. They've been putting out amazing content for years, but their website wasn't doing a great job of showing it off. The great designers at Briteweb put together a super cool new design for them and I was very happy to be part of the small team that built it out. This is a WordPress site built on the Sage ecosystem. I was happy to be able to contribute to lots of cool interactions and details here. The <a href='https://translash.org/projects/legislation-dashboard/'>Legislation Dashboard</a> fetches data daily from an external API and displays it in some cool interactive charts build in D3.js. The <a href='https://translash.org/about/'>about page</a> has a fun animating image on scroll. Checkout the nifty use of <code>position sticky</code> on the articles block on the home page, bold hover states for the 'Articles', 'Podcasts', 'Films' and 'Zines' headlines, and the nice animations on the carousels. Podcasts are integrated with Spotify such that new episodes are automatically imported as draft posts with all the data fields already filled out. An admin notification shows information on the most recent import.",
+    link: "https://translash.org/",
     linkText: "Check it out",
-    linkNote:"(This is running on Heroku's free tier so be patient while it spins up.)",
+    linkNote:"",
     tags: ""
   },
   {
-    title: "An Express JS app for managing gift exchanges",
-    img: "gifts.png",
-    body: "Every year my family, like many others, exchanges Christmas gifts. And every year I struggle to keep track of all the emails about what people would like and who has already got what for who. This app aims to solve that problem.</p><p>It's built with Express/Node with EJS templating, Mongo/Mongoose, Passport/Google OAuth for user authentication and Nodemailer with Sendgrid for emails.</p><p>Next steps: some of the forms here are in desperate need of AJAXification. </p><p><a href='https://github.com/fraserpage/gift-list-app' target='_blank'>Check out my code on GitHub.</a>",
-    link: "https://giftlists-app.herokuapp.com/",
+    title: "An award winning site for Arts Midwest",
+    img: "artsmidwest.jpeg",
+    body: "Another great design here led to some industry accolades. The client is constantly putting out content and makes great use of the flexible Gutenberg block based system. While you're here, checkout the <a href='https://artsmidwest.org/impact/'>impact page</a> for an interactive svg map (built in Alpine.js), with animating numbers and story and grantee blocks that respond to the map state. ",
+    link: "https://artsmidwest.org/",
     linkText: "Check it out",
-    linkNote:"Don't be too shy to sign up for an account! (Also, This is running on Heroku's free tier so be patient while it spins up.)",
+    linkNote:"",
     tags: ""
   },
   {
-    title: "A very silly Django app",
-    img: "sandwich.png",
-    body: "In 2010 I had an idea that it might be fun to slice up pictures of my face and let people slide them around to make new configurations. I was right, <a href='https://fraserpage.github.io/faces2010/' target='_blank'>it was fun.</a> </p><p>11 years later, I pitched redoing this as a full CRUD app that would let users upload photos and make their own face mashups. This was a group project. I created the initial wireframes and design specifications for the site and took on building the front and backend functions for the photo upload tool and 3D spinning block gizmo that sits at the heart of the site. </p><p> Next steps: The spinning cube is really crying out to be swipeable. </p><p><a href='https://github.com/fraserpage/Open-Face-Sandwich-App' target='_blank'>Check out the code on GitHub.</a>",
-    link: "https://open-face-sandwich.herokuapp.com/",
+    title: "A richly animated experience",
+    img: "acumen.jpg",
+    body: "I built most of the animations you'll see as you scroll through this site for Acumen (and many of the blocks they apply to). Note the animating numbers, the parallax effect on images and the transitions as you scroll through carousels. The highlight for me here is <a href='https://acumen.org/where-we-work/'>the interactive map</a> that pulls in data from an internal API. ",
+    link: "https://acumen.org/",
     linkText: "Check it out",
-    linkNote:"(This is running on Heroku's free tier so be patient while it spins up.)",
+    linkNote:"",
+    tags: ""
+  },
+  {
+    title: "A big WordPress multi-site with theme variations",
+    img: "liif.jpeg",
+    body: "This client was entering in to a merger with <a href='https://naht.org/'>another organization.</a> They wanted to maintain separate but connected identities. Towards that end, we built them a single WordPress theme to run on a multi-site installation. The two sites share a common set of Gutenberg blocks that are differentiated primarily by color palette. My favorite bit of work here is the filterable <a href='https://www.liifund.org/who-we-are/staff-and-leadership/'>staff and leadership page</a> (built in Vue.js)",
+    link: "https://www.liifund.org/",
+    linkText: "Check it out",
+    linkNote:"",
+    tags: ""
+  },
+  {
+    title: "Fun animating charts with custom labels",
+    img: "spf.jpeg",
+    body: "I was involved in the whole site build here but the highlight I'll draw your attention to is the charts on their annual report page. These charts are constructed of user entered data. They use chart.js to draw the doughnut but the labels are custom logic the writes directly to the canvas element. We have to figure out which way to draw the line and how to place the text so that it doesn't overlap anything. There's math involved! (I love an opportunity to do math!) Also note the navigation dots on that page which make good use of CSS filters to ensure they stay legible on any background.",
+    link: "https://helpstpauls.com/annual-report/#by-the-numbers",
+    linkText: "Check it out",
+    linkNote:"",
+    tags: ""
+  },
+  {
+    title: "An interactive animated timeline",
+    img: "fof.jpeg",
+    body: "I added an interactive timeline to this existing site. Because of the way event cards are grouped together using an existing carousel library wasn't a good fit. There's some interesting logic here to ensure that the next and previous buttons always perform in a way that makes sense. Plus, the hover animations were fun to do.",
+    link: "https://futureoffood.org/our-work/10-years-of-the-global-alliance-for-the-future-of-food/",
+    linkText: "Check it out",
+    linkNote:"",
     tags: ""
   },
   {
@@ -53,36 +80,12 @@ const accordionContent = [
     tags: ""
   },
   {
-    title: "An 11ty static site with Netlify CMS",
-    img: "ai.png",
-    body: "This project is not quite live yet. It's built with Netlify CMS, Eleventy static site generator, with templates in Nunjucks, running on Netlify. I'm a big believer in modular systems, so this is all built using Netlify CMS's 'variable type' list widget which enables a page-builder type experience. ",
-    link: "https://agnewiler.netlify.app/",
-    linkText: "Check it out",
-    tags: "Netlify, Design by me"
-  },
-  {
-    title: "An annual report mini-site as a WordPress plugin",
-    img: "woodgreen.png",
-    body: "Despite the 'mini-site' label this site is actually quite large. It was developed as a WordPress plugin so as not to require monkeying with Woodgreen's current theme. It utilizes <a href='https://www.advancedcustomfields.com/' target='_blank'>ACF</a> flexible fields to provide a page-builder like functionality on the backend. </p><p>Design by <a href='https://rallyrally.design' target='_blank' rel='nofollow'>RallyRally</a>.",
-    link: "https://archive.woodgreen.org/about-us/annual-reports/2019-20/governance-update-woodgreen-foundation/",
-    linkText: "This is my favourite page. Fun animating charts!",
-    tags: "WordPress, WordPress plugin, Animation, Design by RallyRally"
-  },
-  {
     title: "Firebase, fun forms and playful interactivity for my wedding website",
     img: "wedding.png",
     body: "A labour of love! I wanted to build something fun for my wedding. Move your mouse around and Kasia and I will watch where you go. Click the heart emoji to shoot an arrow through it and make us kiss! On mobile you grab onto the bow and arrow and point it at the heart to do the same thing. (I mocked up a version of the mobile site that used your phone's accelerometer to move the ball around, which I thought was pretty cool but is so far from a normal mode of input that it was pretty confusing.)</p><p>Guests were all assigned custom urls at which they could RSVP and read more details. The site is running on Firebase and uses their API to create a slightly unusual RSVP form which saves as you go. I wanted to integrate the gift registry into the site too but ran out of time.",
     link: "https://kasia-fraser.love/rsvp/v4jXBVDBjTyz7YDY9vDxVjmm",
     linkText: "Here's Doug's RSVP page. Feel free to play around with the form.",
     tags: "Fun Javascript, Firebase"
-  },
-  {
-    title: "A big modular WordPress site",
-    img: "cv.png",
-    body: "Likely takes the crown for the biggest site I've created. Every piece of this site is an <a href='https://www.advancedcustomfields.com/' target='_blank'>ACF</a> flexible field, which makes this an incredibly flexible site on the backend. The centrepiece, in my mind is the robust 'filter' feature on the Community page which lets you sort through a huge number of 'business cards' via AJAX. </p><p>Design by <a href='https://rallyrally.design' target='_blank' rel='nofollow'>RallyRally</a>.",
-    link: "https://climateventures.org/community/",
-    linkText: "Check out the filter page here.",
-    tags: "WordPress, AJAX"
   },
   {
     title: "A year-in-review WordPress mini-site",
@@ -107,14 +110,6 @@ const accordionContent = [
     link: "https://www.healthyschoolsalliance.ca/en/resources/",
     linkText: "Check out the Resources page.",
     tags: "Squarespace, AJAX, Tricky CSS, Multilingual"
-  },
-  {
-    title: "A Multilingual WordPress Gutenberg site",
-    img: "meck.png",
-    body: "This fairly simple site is built entirely on WordPress' Gutenberg editor, making for a flexible component based site with a fully WYSIWYG editor experience. The multilingual logic is all custom code. A lot of attention was paid to accessibility on this site. </p><p>Design by <a href='https://rallyrally.design' target='_blank' rel='nofollow'>RallyRally</a>.",
-    link: "https://meckplaybook.com/plan-updates/",
-    linkText: "This page has a fun little timeline slider thing.",
-    tags: "WordPress, Gutenberg, Multilingual"
   },
   {
     title: "A fully custom Squarespace site",
@@ -162,6 +157,10 @@ window.addEventListener('mousemove', e => {
 /* Read more button */ 
 document.getElementById('readmore').addEventListener('click', () =>{
   document.body.classList.add('more')
+})
+
+document.getElementById('readmore2').addEventListener('click', () =>{
+  document.body.classList.add('more2')
 })
 
 /* --- Accordions --- */
