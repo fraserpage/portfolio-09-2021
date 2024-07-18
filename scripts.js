@@ -151,7 +151,7 @@ accordion.innerHTML = accordionHTML;
 /* Make bg change on mouse move */
 window.addEventListener('mousemove', e => {
   let combinedMousePosition = (e.clientX/window.innerWidth + e.clientY/window.innerHeight)/2
-  document.body.style.background = `hsl(${45*combinedMousePosition+150},100%,50%)`
+  document.body.style.background = `hsl(${45*combinedMousePosition+150},100%,82%)`
 })
 
 /* Read more button */ 
