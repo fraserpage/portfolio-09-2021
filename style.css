@@ -1,5 +1,7 @@
- body {
-  background:hsl(182, 100%, 82%);
+
+body {
+  position: relative;
+  background: linear-gradient(90deg, rgb(163, 232, 255) 0%, rgb(163, 255, 239) 100%);
   font-size:16px;
   margin: 0 auto;
   padding: 10vw 5vw;
@@ -12,6 +14,7 @@
     "SOFT" 100,
     "WONK" 1;
 }
+
 header,
 main {
   max-width: 1500px;
@@ -114,7 +117,7 @@ dl{
 dt{
   font-weight: 700;
   color: #1a1a33;
-  margin: 0 -1rem;
+  margin: 1rem -1rem 0;
   line-height: 2;
   position: relative;
   cursor:pointer;
@@ -125,7 +128,7 @@ dt{
   border-radius: 0.5rem;
   padding: 0 1rem;
 }
-dt:not(.open):hover{
+dt:hover{
   background-color: white;
 }
 dt:not(.open):hover h3 {
@@ -135,10 +138,16 @@ dt h3{
   padding:0 1rem;
   border-right: 1px solid;
   flex-grow: 1;
-  transition: all 0.35s;
+  transition: all 0.8s;
+  transform-origin: left;
+}
+dt.open{
+  background-color: white;
+  border-radius: 1rem 1rem 0 0;
 }
 dt.open h3 {
   border-right-color: transparent;
+  transform: scale(1.5);
 }
 dt img{
   width: clamp(6rem,33vw,40rem);
@@ -157,14 +166,6 @@ dt img{
 #accordion.active dt.open img{
   transform: scale(0);
 }
-.accordion-right img{
-  transition: transform 0.8s;
-  transform: scale(0);
-  transform-origin: right top;
-}
-dt.open + dd .accordion-right img{
-  transform: scale(1)
-}
 dt.closed + dd {
   display: none;
 }
@@ -176,9 +177,21 @@ dl.active dt:hover {
 dd {
   display: flex;
   flex-direction: column;
-  margin: 0;
-  transition: height .5s ease;
+  background-color: white;
+  border-radius: 0 0 1rem 1rem;
+  padding: 0 2rem;
+  transform: translateY(-1rem);
+  margin: 0 -1rem;
+  transition: height 1s;
   overflow: hidden;
+}
+dt.open + dd div {
+  opacity: 100%;
+}
+dd div{
+  padding: 1rem 0;
+  opacity: 0;
+  transition: opacity 1s;
 }
 dd > :last-child{
   margin-bottom: 2rem;  
@@ -192,6 +205,25 @@ dd > :last-child{
 .accordion-left {
   order: 2;
   margin-bottom: 1.5rem
+}
+.button {
+  background-color: black;
+  border: 2px solid black;
+  color: white;
+  font-weight: 700;
+  padding: 0.7rem 1.6rem;
+  border-radius: 0.8rem;
+  margin-top: 2rem;
+  display: inline-block;
+  font-style: italic;
+  letter-spacing: 0.025rem;
+  box-shadow: none;
+}
+.button:hover {
+  font-weight: 1000;
+  background-color: white;
+  color: black;
+  box-shadow: none;
 }
 
 @media screen and (min-width: 1280px) {

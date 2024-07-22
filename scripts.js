@@ -136,7 +136,7 @@ accordionContent.forEach(entry =>{
         <p>
           ${entry.body}
         </p>
-        <p><a href='${entry.link}' target='_blank'>
+        <p><a class='button' href='${entry.link}' target='_blank'>
           ${entry.linkText}
         </a></p>
         ${entry.linkNote ? `<p class="link-note">${entry.linkNote}</p>` : ``}
@@ -148,10 +148,16 @@ accordionContent.forEach(entry =>{
 })
 accordion.innerHTML = accordionHTML;
 
+
 /* Make bg change on mouse move */
 window.addEventListener('mousemove', e => {
-  let combinedMousePosition = (e.clientX/window.innerWidth + e.clientY/window.innerHeight)/2
-  document.body.style.background = `hsl(${45*combinedMousePosition+150},100%,82%)`
+  let mouseY = e.clientY/window.innerHeight;
+  let mouseX = e.clientX/window.innerWidth;
+  document.body.style.background = `linear-gradient(
+    90deg, 
+    hsl(${45*mouseX+150},100%,82%) 0%, 
+    hsl(${45*mouseY+150},100%,82%) 100%
+  )`
 })
 
 /* Read more button */ 
@@ -212,12 +218,13 @@ function toggleAccordion(dt){
     dd.style.height = dd.clientHeight + "px";
     setTimeout(() => {
       dd.style.height = "0px";
+      dt.classList.remove('open');
     }, 0); 
     dt.ariaExpanded = false;
     /** Change the classes when the animation ends. */
-    dd.addEventListener('transitionend', () => {
+    dd.addEventListener('transitionend', (e) => {
       dt.classList.add('closed');
-      dt.classList.remove('open');
+      
     }, {once: true})
   }
 }
