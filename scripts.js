@@ -194,6 +194,7 @@ document.querySelectorAll('dl dd').forEach(dd =>{
   dd.style.height = "0px";
 });
 
+
 function toggleAccordion(dt){
   let dd = dt.nextElementSibling;
   //Open it
@@ -201,6 +202,15 @@ function toggleAccordion(dt){
     dt.classList.remove('closed');
     dt.classList.add('open');
     dt.ariaExpanded = true;
+    // resize dt elem if enlarged h3 will overflow it
+    const h3Height = dt.children[0].clientHeight;
+    if(h3Height * 1.5 > dt.clientHeight - 64){
+      dt.style.height = dt.clientHeight + 'px';
+      dt.dataset.h = dt.clientHeight;
+      setTimeout(() => {
+        dt.style.height  = h3Height * 1.5 + 64 + 'px';
+      }, 0); 
+    }
     //slide down dd (animation is css transition)
     dd.style.height = "auto";
     var height = dd.clientHeight + "px";
@@ -216,6 +226,10 @@ function toggleAccordion(dt){
   else if (dt.classList.contains('open')){
     //slide up dd
     dd.style.height = dd.clientHeight + "px";
+    if(dt.dataset.h){
+      dt.style.height = dt.dataset.h + "px";
+    }
+
     setTimeout(() => {
       dd.style.height = "0px";
       dt.classList.remove('open');
@@ -224,7 +238,7 @@ function toggleAccordion(dt){
     /** Change the classes when the animation ends. */
     dd.addEventListener('transitionend', (e) => {
       dt.classList.add('closed');
-      
+      dt.style.height = '';
     }, {once: true})
   }
 }
