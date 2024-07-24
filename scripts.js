@@ -206,9 +206,9 @@ document.addEventListener('alpine:init', () => {
     handleClose(){
       this.headStyle.height = this.headHeight + 'px';
 
-      this.$nextTick(()=>{
+      setTimeout(()=>{
         this.headStyle.height = 'auto';
-      })
+      },1000)
     },
 
     
