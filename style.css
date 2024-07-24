@@ -265,6 +265,11 @@ button:hover .tag-count {
   margin: 0;
   transition: height 1s;
   overflow: hidden;
+  opacity: 1;
+  transition: opacity 0.1s 0.2s, height 0.35s !important;
+}
+.closed + .accordion-body {
+  opacity: 0;;
 }
 .accordion-body div{
   padding: 1rem 0;
