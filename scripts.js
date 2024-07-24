@@ -113,6 +113,9 @@ const accordionContent = [
   }
 ]
 
+/**
+ * Get tags from accordionContent, add counts, alphabetize
+ */
 const allTags = accordionContent.reduce((tags, item) => {
   tags.push(...item.tags);
   return tags;
@@ -223,11 +226,3 @@ window.addEventListener('mousemove', e => {
   )`
 })
 
-/* Read more button */ 
-document.getElementById('readmore').addEventListener('click', () =>{
-  document.body.classList.add('more')
-})
-
-document.getElementById('readmore2').addEventListener('click', () =>{
-  document.body.classList.add('more2')
-})

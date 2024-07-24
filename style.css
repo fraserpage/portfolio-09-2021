@@ -96,9 +96,6 @@ button{
   transition: all 0.3s;
   font-family:inherit;
 }
-button:focus{
-  /* outline:none; */
-}
 #more,
 #more2,
 body.more #readmore,
@@ -330,6 +327,7 @@ button:hover .tag-count {
   }
 }
 
+[x-cloak],
 .hide {
   display: none;
 }
