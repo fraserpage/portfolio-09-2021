@@ -54,10 +54,10 @@ h1, h2{
   margin:0;  
 }
 h3{
-  margin:2rem 0;
   line-height: 1.1;
   font-size: 2.3rem;
   font-size: clamp(1.5rem,5vw,3rem);
+  margin: 0;
 }
 button,
 a{
@@ -111,45 +111,66 @@ body.more2 #more2{
 }
     
 /*Accordion*/
-dl{
+ul#accordion{
+  margin: 0;
   margin-bottom: 5rem;
+  padding: 0;
+  list-style: none;
+  min-height: 100vh;
 }
-dt{
+.accordion-head{
   font-weight: 700;
   color: #1a1a33;
-  margin: 1rem -1rem 0;
+  margin: 1rem 0;
   line-height: 2;
   position: relative;
-  cursor:pointer;
   font-size: 2rem;
   display: flex;
   align-items: center;
   transition: all 0.35s;
   border-radius: 0.5rem;
-  padding: 0 1rem;
+  padding: 0 2rem 0 1rem;
+  border: 1px solid #0000002e;
+  cursor: pointer;
 }
-dt:hover{
-  background-color: white;
+.accordion-head:hover{
+  background-color: #ffffff29;
 }
-dt:not(.open):hover h3 {
+.accordion-head.closed:hover div {
   border-right-color: transparent;
 }
-dt h3{
-  padding:0 1rem;
-  border-right: 1px solid;
+.accordion-head div{
+  padding: 1rem;
+  border-right: 1px solid #0000002e;
   flex-grow: 1;
   transition: all 0.8s;
   transform-origin: left;
 }
-dt.open{
+.accordion-head.open{
+  border-color: transparent;
   background-color: white;
   border-radius: 1rem 1rem 0 0;
 }
-dt.open h3 {
+.accordion-head.open div {
   border-right-color: transparent;
   transform: scale(1.5);
 }
-dt img{
+.accordion-head ul {
+  transition: transform 0.8s;
+  transform-origin: top left;
+}
+.accordion-head.open ul {
+  transform: scale(calc(1 / 1.5));
+}
+.accordion-head h3 button {
+  font-weight: 800;
+  box-shadow: none;
+  text-align: left;
+}
+.accordion-head h3 button:hover {
+  box-shadow: none;
+}
+.accordion-head img{
   width: clamp(6rem,33vw,40rem);
   transition: transform 0.8s;
   transform-origin: right center;
@@ -159,41 +180,99 @@ dt img{
   transform: scale(0.75);
   flex: 0;
 }
-.active dt:hover img {
+.filter-list-outer {
+  border-radius: .75rem;
+  padding: 0.5rem 2rem;
+  margin-top: 2rem;
+  margin-bottom: 1rem;
+  border: 1px solid #0000002e;
+}
+.filter-list-outer:hover {
+  background-color: #ffffff29;
+}
+.filter-title {
+  color: #000000d9;
+  font-size: 1rem;
+  font-weight: 800;
+  margin: 1rem 0 0.5rem;
+}
+.filter-info {
+  font-size: 0.95rem;
+  max-width: none;
+}
+#accordion .filter-list {
+  font-size: 1rem;
+}
+.filter-list {
+  display: flex;
+  flex-wrap: wrap;
+  list-style: none;
+  gap: 0.3rem;
+  padding: 0;
+  margin-left: -0.5rem;
+}
+button.filter {
+  font-size: 0.8rem;
+  border-radius: 4rem;
+  padding: 0 0.5rem;
+  margin: 0;
+  box-shadow: none;
+  color: #000000b5;
+  line-height: 2;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.3rem;
+}
+button.filter:hover {
+  box-shadow: none;
+  background-color: black;
+  color: white;
+}
+button.filter.active {
+  background-color: black;
+  color: white;
+}
+.tag-count {
+  background-color: #000000ba;
+  color: #ffffffe3;
+  border: 1px solid #000000ba;
+  border-radius: 5rem;
+  display: inline-block;
+  padding: 0.15rem 0.25rem;
+  line-height: 1;
+  font-size: 0.65rem;
+  font-weight: 800;
+  min-width: 0.8em;
+  transition: all 0.3s;
+}
+button.filter.active .tag-count,
+button:hover .tag-count {
+  background-color: #ffffffe3;
+  color: black;
+  border-color: black;
+}
+.active .accordion-head:hover img {
   transform: scale(1);
 }
-#accordion:not(.active) dt img,
-#accordion.active dt.open img{
+#accordion:not(.active) .accordion-head img,
+#accordion.active .accordion-head.open img{
   transform: scale(0);
 }
-dt.closed + dd {
-  display: none;
-}
-
-dl.active dt:focus,
-dl.active dt:hover {
-  /* outline:none; */
-}
-dd {
+.accordion-body {
   display: flex;
   flex-direction: column;
   background-color: white;
   border-radius: 0 0 1rem 1rem;
   padding: 0 2rem;
   transform: translateY(-1rem);
-  margin: 0 -1rem;
+  margin: 0;
   transition: height 1s;
   overflow: hidden;
 }
-dt.open + dd div {
-  opacity: 100%;
-}
-dd div{
+.accordion-body div{
   padding: 1rem 0;
-  opacity: 0;
-  transition: opacity 1s;
 }
-dd > :last-child{
+.accordion-body > :last-child{
   margin-bottom: 2rem;  
 }
 
@@ -228,7 +307,7 @@ dd > :last-child{
 
 @media screen and (min-width: 1280px) {
   
-  dd {
+  .accordion-body {
     flex-direction: row;
   }
 
@@ -249,4 +328,8 @@ dd > :last-child{
   .accordion-left>a {
     margin-top: auto;
   }
+}
+
+.hide {
+  display: none;
 }

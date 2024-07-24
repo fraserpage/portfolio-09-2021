@@ -26,12 +26,14 @@
   <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,100..900;1,9..144,100..900&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
   <script src="scripts.js" defer></script>
+  <script defer src="https://cdn.jsdelivr.net/npm/@alpinejs/collapse@3.x.x/dist/cdn.min.js"></script>  
+  <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
 </head>
 <body>
   <header>
     <img src="images/fraser.jpg" alt="Fraser Page">
     <div>
-      <h1>Hi I'm Fraser. </h1>
+      <h1>Hi, I'm Fraser. </h1>
       <h2>I make stuff on the internet.</h2>
       <p class="lots-a-space">
         <i>Say hi: <a href="mailto:fp@fraser.page?subject=Hi Fraser!">fp@fraser.page</a></i>
@@ -39,13 +41,13 @@
 
       <div class="columns">
         <p>I'm a web developer with great attention to detail and a strong creative impulse. I've been building and playing with code on the internet for something like 15 years now.</p>
-        <button id="readmore">Read more</button>
+        <button type="button" id="readmore">Read more</button>
         <div id="more">
           <p>Most recently I've worked as a WordPress Developer at <a href="http://briteweb.com" target="_blank" rel="noopener noreferrer">Briteweb</a>, a social impact agency and strategic partner, specializing in branding, digital and marketing solutions for nonprofits, foundations and purpose-driven companies.</p>
           <p>Briteweb's clients do amazing things and I was happy to implement many amazing designs on their behalf.</p>
           <p>I led internal efforts to improve our code quality, our documentation, automate processes and ensure site were built to accessible standards.</p>
           <p>I'm always working to improve my skills and try new things.</p>
-          <button id="readmore2">Read even more</button>
+          <button type="button" id="readmore2">Read even more</button>
         </div>
         <div id="more2">
           <p>Before Briteweb, I worked with the talented, detail driven and social-good focused designers at <a href="https://rallyrally.design" target="_blank" rel="nofollow">RallyRally</a> (their site is a custom WordPress website built by me) and as a freelancer before that, sometimes doing design, dev and even copy writing as needed.</p>
@@ -58,11 +60,109 @@
       </div>
     </div>
   </header>
-  <main>
+  <main x-data="projects">
     <h2>Here are a few projects I've worked on recently.</h2>
-    <dl id="accordion" class="active">
-      <h3>You need to run javascript to use this website.</h3>
-    </dl>
+    <div class="filter-list-outer" role="toolbar">
+      <h3 class="filter-title">Explore by tag</h3>
+      <p class="filter-info">I've made an effort to the most relevant tech for each project. A list like this is by necessity a little incomplete. <br/>
+      Click on a tag to filter by it. Click again to clear the filter.</p>
+      <ul class="filter-list">
+        <template x-for="tag in filters">
+          <li>
+            <button
+              type="button" 
+              @click="filter(tag.title)"
+              class="filter"
+              :class="filterClass(tag.title)"
+              :aria-pressed="isActiveFilter(tag.title)"
+            >
+              <span x-html="tag.title"></span>
+              <span
+                x-show="tag.count"
+                class="tag-count"
+                x-text="tag.count"
+              ></span>
+            </button>
+          </li>
+        </template>
+      </ul>
+    </div>
+
+
+    <ul id="accordion" class="active">
+      <template x-for="project in projects">
+        <li 
+          x-data="accordion"
+          x-id="['body', 'button']"
+          x-show="showProject(project)" 
+        >
+          <div 
+            class="accordion-head" 
+            x-ref="head"
+            :style="headStyle"
+            :class="open ? 'open' : 'closed'"
+            @click="handleAnywhereClick"
+          >
+            <div>
+              <h3>
+                <button
+                  type="button" 
+                  x-ref="h3"
+                  :id="$id('button')"
+                  x-text="project.title"
+                  @click="toggle()"
+                  :aria-expanded="open"
+                  :aria-controls="$id('body')"
+                ></button>
+              </h3>
+              <ul class="filter-list" aria-label="tags"> 
+                <template x-for="tag in project.tags">
+                  <li>
+                    <button 
+                      type="button" 
+                      @click="filter(tag)" 
+                      x-html="tag"
+                      class="filter"
+                      :class="filterClass(tag)"
+                      :aria-pressed="isActiveFilter(tag)"
+                    ></button>
+                  </li>
+                </template>
+              </ul>
+              
+            </div>
+            <img :src="`images/${project.img}`">
+          </div>
+
+          <div
+            :id="$id('body')"
+            :aria-labelledby="$id('button')"
+            class="accordion-body"
+            x-show="open" 
+            x-collapse.durration.350ms
+            role="region"
+          >
+            <div class='accordion-left'>
+              <p x-html="project.body" ></p>
+              <p><a 
+                x-text="project.linkText"
+                class='button' 
+                :href="project.link" 
+                target='_blank'
+              ></a></p>
+              <p
+                x-show="project.linkNote"
+                x-text="project.linkNote"
+                class="link-note"
+              ></p>
+            </div>
+            <div class='accordion-right'>
+              <img :src="`images/${project.img}`">
+            </div>
+          </div>
+        </li>
+      </template>
+    </ul>
     <p>That's it! Thanks for visiting!</p>
   </main>
 </body>
