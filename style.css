@@ -147,6 +147,7 @@ ul#accordion{
   border-color: transparent;
   background-color: white;
   border-radius: 1rem 1rem 0 0;
+  border-bottom: 1px solid #0000002e;
 }
 .accordion-head.open div {
   border-right-color: transparent;
@@ -274,14 +275,10 @@ button:hover .tag-count {
 .accordion-body div{
   padding: 1rem 0;
 }
-.accordion-body > :last-child{
-  margin-bottom: 2rem;  
-}
 
 .accordion-right {
   order: 1;
   margin-top: 1rem;
-  margin-bottom: 1.5rem
 }
 .accordion-left {
   order: 2;
@@ -311,6 +308,7 @@ button:hover .tag-count {
   
   .accordion-body {
     flex-direction: row;
+    padding: 2rem;
   }
 
   .accordion-right {
@@ -325,6 +323,7 @@ button:hover .tag-count {
     flex-direction: column;
     align-self: stretch;
     flex: 1;
+    margin-top: 1rem;
   }
 
   .accordion-left>a {
