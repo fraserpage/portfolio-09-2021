@@ -187,6 +187,7 @@ document.addEventListener('alpine:init', () => {
      * Resize the accordion head
      */ 
     handleOpen(){
+      if(document.body.clientWidth < 600) return;
       // Store current head height
       this.headHeight = this.$refs.head.clientHeight;
       // Set head height to current so we can animate it
@@ -204,6 +205,8 @@ document.addEventListener('alpine:init', () => {
      * Animate the head height to the 'closed' value.
      */
     handleClose(){
+      if(document.body.clientWidth < 600) return;
+      
       this.headStyle.height = this.headHeight + 'px';
 
       setTimeout(()=>{
