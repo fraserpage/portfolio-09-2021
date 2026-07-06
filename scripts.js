@@ -1,231 +1,153 @@
-/* Portfolio content */
-const accordionContent = [
-  {
-    title: "A bold site for a bold initiative",
-    img: "translash.jpeg",
-    body: "TransLash tells trans stories to save trans lives. They've been putting out amazing content for years, but their website wasn't doing a great job of showing it off. <a href='https://www.hops-and-vines.com/' target='_blank'>Alix Hopfengaertner-Vigneault</a> and <a href='https://www.kailajacques.com/'target='_blank'>Kaila Jacques</a>  put together a super cool new design for them, and I was very happy to be part of the small team that built it out. This is a WordPress site built on the Sage ecosystem. I was happy to contribute to lots of cool interactions and details here. The <a href='https://translash.org/projects/legislation-dashboard/' target='_blank'>Legislation Dashboard</a> fetches data daily from an external API and displays it in some cool interactive charts built in D3.js. The <a href='https://translash.org/about/' target='_blank'>about page</a> has a fun animating image on scroll. Check out the nifty use of <code>position sticky</code> on the articles block on the home page, bold hover states for the 'Articles,' 'Podcasts,' 'Films,' and 'Zines' headlines, and the nice animations on the carousels. Podcasts are integrated with Spotify such that new episodes are automatically imported as draft posts with all the data fields already filled out. An admin notification shows information on the most recent import.",
-    link: "https://translash.org/",
-    linkText: "Check it out",
-    linkNote: "",
-    tags: ["&#9733; My Favs", "D3.js", "API integration", "WordPress", "Sage", "ACF Composer", "Animation", "Alpine.js"],
-  },
-  {
-    title: "An award-winning site for Arts Midwest",
-    img: "artsmidwest.jpeg",
-    body: "Another great design here led to some industry accolades. The client is constantly putting out content and makes great use of the flexible Gutenberg block-based system. While you're here, check out the <a href='https://artsmidwest.org/impact/' target='_blank'>impact page</a> for an interactive SVG map (built in Alpine.js), with animating numbers and story and grantee blocks that respond to the map state.",
-    link: "https://artsmidwest.org/",
-    linkText: "Check it out",
-    linkNote: "",
-    tags: ["WordPress", "Sage", "ACF Composer", "Alpine.js", "Vue.js"],
-  },
-  {
-    title: "A richly animated experience",
-    img: "acumen.jpg",
-    body: "I built most of the animations you'll see as you scroll through this site for Acumen (and many of the blocks they apply to). Note the animating numbers, the parallax effect on images, and the transitions as you scroll through carousels. The highlight for me here is <a href='https://acumen.org/where-we-work/' target='_blank'>the interactive map</a> that pulls in data from an internal API.",
-    link: "https://acumen.org/",
-    linkText: "Check it out",
-    linkNote: "",
-    tags: ["WordPress", "Sage", "ACF Composer", "Animation", "Vue.js"],
-  },
-  {
-    title: "A big WordPress multi-site with theme variations",
-    img: "liif.jpeg",
-    body: "This client was entering into a merger with <a href='https://naht.org/' target='_blank'>another organization.</a> They wanted to maintain separate but connected identities. Towards that end, we built them a single WordPress theme to run on a multi-site installation. The two sites share a common set of Gutenberg blocks that are differentiated primarily by color palette. My favorite bit of work here is the filterable <a href='https://www.liifund.org/who-we-are/staff-and-leadership/' target='_blank'>staff and leadership page</a> (built in Vue.js).",
-    link: "https://www.liifund.org/",
-    linkText: "Check it out",
-    linkNote: "",
-    tags: ["WordPress", "Sage", "ACF Composer", "Multi-site", "Vue.js"],
-  },
-  {
-    title: "Fun animating charts with custom labels",
-    img: "spf.jpeg",
-    body: "I was involved in the whole site build here, but the highlight I'll draw your attention to is the charts on their annual report page. These charts are constructed from user-entered data. They use Chart.js to draw the doughnut, but the labels are custom logic that writes directly to the canvas element. We have to figure out which way to draw the line and how to place the text so that it doesn't overlap anything. There's math involved! (I love an opportunity to do math!) Also, note the navigation dots on that page, which make good use of CSS filters to ensure they stay legible on any background.",
-    link: "https://helpstpauls.com/annual-report/#by-the-numbers",
-    linkText: "Check it out",
-    linkNote: "",
-    tags: ["WordPress", "Sage", "ACF Composer", "Chart.js", "Canvas"],
-  },
-  {
-    title: "An interactive animated timeline",
-    img: "fof.jpeg",
-    body: "I added an interactive timeline to this existing site. Because of the way event cards are grouped together, using an existing carousel library wasn't a good fit. There's some interesting logic here to ensure that the next and previous buttons always perform in a way that makes sense. Plus, the hover animations were fun to do.",
-    link: "https://futureoffood.org/our-work/10-years-of-the-global-alliance-for-the-future-of-food/",
-    linkText: "Check it out",
-    linkNote: "",
-    tags: ["WordPress", "Vanilla JavaScript"],
-  },
-  {
-    title: "A fun little React app for exploring Mars Rover photos",
-    img: "rover.png",
-    body: "This little React app lets you explore NASA's Mars Rover photo API. Select a Rover, select a mission day: see photos. You can optionally filter by the camera used and change the number of photos per page. Each photo has a like button that you can click if you like, though likes are not saved to any database. The photos have a fun CSS animation as a loading state. Clicking on a photo opens it in lightbox mode. Next steps: this all just lives at a single URL right now. It would be nice to be able to link to specific pages or photos. That might enable some nice sharing functionality. It'd also be nice if those like buttons were hooked up to a DB. <a href='https://github.com/fraserpage/Spacestagram' target='_blank'>Check out the code on GitHub.</a>",
-    link: "https://fraserpage.github.io/Spacestagram/",
-    linkText: "Check it out",
-    linkNote: "",
-    tags: ["React"],
-  },
-  {
-    title: "Conway's Game of Life: The Game",
-    img: "game.png",
-    body: "I wondered if I could turn John Conway's Game of Life algorithm into an actual multiplayer game. In search of that, I wrote up some proposed rules and made a super customizable, DOM-based, vanilla JS implementation of the game, complete with a drag-and-drop 'library' of interesting patterns. In the end, I hardly felt the need to 'play' any games with this. It's just super fun to mess around with. Next steps: the intro/settings screen is a little overwhelming and would be well served by a bit of slimming down and maybe recommending sets of settings to users instead of forcing them to choose them all. I'd also love to give users the option of adding their own patterns to the library. Finally, it needs a reset button. <a href='https://github.com/fraserpage/the-game-of-life-the-game' target='_blank'>Check out my code on GitHub.</a>",
-    link: "https://fraserpage.github.io/the-game-of-life-the-game/",
-    linkText: "Check it out",
-    tags: ["Vanilla JavaScript"],
-  },
-  {
-    title: "A better Tic Tac Toe",
-    img: "tic.png",
-    body: "Tic Tac Toe is boring. It's impossible to win unless you're playing against a not-very-bright child. So in service of finding a more fun version, this is a super customizable Tic Tac Toe. 3 players? Sure. 8?? Why not. 6 x 60 board? 5 in a row to win? Go ahead! Probably it'll be more fun than the most boring game in the world. This is just vanilla JS, HTML, and CSS. The fun part of this was writing a diagonal grid search algorithm to find a winning state. <a href='https://github.com/fraserpage/ResizableTicTacToe' target='_blank'>Peep my code on GitHub.</a>",
-    link: "https://fraserpage.github.io/ResizableTicTacToe/",
-    linkText: "Have fun with it! I know I did.",
-    tags: ["Vanilla JavaScript"],
-  },
-  {
-    title: "Firebase, fun forms, and playful interactivity for my wedding website",
-    img: "wedding.png",
-    body: "A labor of love! I wanted to build something fun for my wedding. Move your mouse around, and Kasia and I will watch where you go. Click the heart emoji to shoot an arrow through it and make us kiss! On mobile, you grab onto the bow and arrow and point it at the heart to do the same thing. (I mocked up a version of the mobile site that used your phone's accelerometer to move the ball around, which I thought was pretty cool but is so far from a normal mode of input that it was pretty confusing.) Guests were all assigned custom URLs at which they could RSVP and read more details. The site is running on Firebase and uses their API to create a slightly unusual RSVP form that saves as you go. I wanted to integrate the gift registry into the site too but ran out of time.",
-    link: "https://kasia-fraser.love/rsvp/v4jXBVDBjTyz7YDY9vDxVjmm",
-    linkText: "Here's Doug's RSVP page. Feel free to play around with the form.",
-    tags: ["&#9733; My Favs", "Vanilla JavaScript", "Firebase"],
-  },
-  {
-    title: "A chat-themed year-in-review WordPress mini-site",
-    img: "IC2021.png",
-    body: "In my previous life as IT and Marketing Manager at a small law firm, my favorite time of year was December. Each year I'd put together an increasingly ambitious year-in-review mini-site. 2021 was my last and most ambitious effort. A 'chat' themed review for a year spent working from home. Lots of little hidden (and not entirely accessible!) interactions here. Hover over a photo to see a bio of each person; click on a chat bubble to add a reaction to it. Reactions are hooked up to the WordPress REST API to save them to the database.",
-    link: "https://ilercampbell.com/2021/",
-    linkText: "Check it out",
-    tags: ["WordPress", "ACF", "jQuery"],
-  },
-  {
-    title: "A patched-up Squarespace site",
-    img: "schools.png",
-    body: "This is a Squarespace website that I was called in to help with. On the CSS side, the most exciting bit is the fairly complicated underline effect on the main headings. These are created with a precisely defined repeating linear gradient background. Squarespace has no support for multilingual sites, which this is. To make the header and footer change to match the language of the page, I'm using JavaScript to read the site URL and then swap in the correct elements based on the page belonging to the 'en' or 'fr' part of the site. On the 'Resources' page, I AJAX in the next page of resources right away to get around Squarespace's limit on the number of blog posts that a page can show at once. Any further posts (if they exist) can be AJAX'd in by clicking on a button at the bottom. The 'Resources' are also filterable, but Squarespace's filter widget is confoundingly dumb. It gives no indication of what the current filter state is. To fix this, I parse the URL again and write a title based on this. I also made the filter load posts by AJAX to prevent a confusing page reload. Design by <a href='https://rallyrally.design' target='_blank' rel='nofollow'>RallyRally</a>.",
-    link: "https://www.healthyschoolsalliance.ca/en/resources/",
-    linkText: "Check out the Resources page",
-    tags: ["Squarespace", "Tricky CSS", "Multilingual", "Vanilla JavaScript"],
-  },
-  {
-    title: "A fully custom Squarespace site",
-    img: "book.png",
-    body: "This commerce site is running on Squarespace's 'Developer' platform, which allows for <i>almost</i> fully custom themes. Design by Kaila Jacques.",
-    link: "https://www.heresmybook.com/",
-    linkText: "Check it out",
-    tags: ["Squarespace", "Squarespace Developer Platform"],
-  },
-]
+const prefersReducedMotion = () =>
+  window.matchMedia('(prefers-reduced-motion: reduce)').matches;
 
-/**
- * Get tags from accordionContent, add counts, alphabetize
- */
-const allTags = accordionContent.reduce((tags, item) => {
-  tags.push(...item.tags);
-  return tags;
-}, []);
+function getEffectiveTheme() {
+  const stored = document.documentElement.dataset.theme;
+  if (stored === 'dark' || stored === 'light') return stored;
+  return window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
+}
 
-const tagCounts = allTags.reduce((counts, tag) => {
-  counts[tag] = (counts[tag] || 0) + 1;
-  return counts;
-}, {});
+function parseRgb(color) {
+  const match = color.match(/rgba?\((\d+),\s*(\d+),\s*(\d+)/);
+  if (!match) return [220, 240, 252];
+  return match.slice(1, 4).map(Number);
+}
 
-const tagsWithCount = Object.keys(tagCounts).map(tag => ({
-  title: tag,
-  count: tagCounts[tag]
-}));
+function rgbToCss(r, g, b) {
+  return `rgb(${Math.round(r)}, ${Math.round(g)}, ${Math.round(b)})`;
+}
 
-const sortedTags = tagsWithCount.sort((a,b) => {
-  return a.title < b.title ? -1 : 1;
-})
+function lerp(a, b, t) {
+  return a + (b - a) * t;
+}
 
-sortedTags.unshift({
-  title: 'All',
-  count: '',
-})
+function applyStaticBackground() {
+  const styles = getComputedStyle(document.documentElement);
+  const start = styles.getPropertyValue('--bg-start').trim();
+  const end = styles.getPropertyValue('--bg-end').trim();
+  document.body.style.background = `linear-gradient(90deg, ${start} 0%, ${end} 100%)`;
+}
+
+function applyInteractiveBackground(mouseX, mouseY) {
+  const theme = getEffectiveTheme();
+  if (theme === 'dark') {
+    const styles = getComputedStyle(document.documentElement);
+    const [r1, g1, b1] = parseRgb(styles.getPropertyValue('--bg-start').trim());
+    const [r2, g2, b2] = parseRgb(styles.getPropertyValue('--bg-end').trim());
+    const shift = 18;
+    const start = rgbToCss(
+      lerp(r1, r2, mouseX * 0.15) + mouseX * shift - shift / 2,
+      lerp(g1, g2, mouseX * 0.15) + mouseY * shift * 0.5 - shift / 4,
+      lerp(b1, b2, mouseY * 0.15) + mouseY * shift - shift / 2
+    );
+    const end = rgbToCss(
+      lerp(r2, r1, mouseY * 0.15) + mouseY * shift - shift / 2,
+      lerp(g2, g1, mouseY * 0.15) + mouseX * shift * 0.5 - shift / 4,
+      lerp(b2, b1, mouseX * 0.15) + mouseX * shift - shift / 2
+    );
+    document.body.style.background = `linear-gradient(90deg, ${start} 0%, ${end} 100%)`;
+    return;
+  }
+
+  document.body.style.background = `linear-gradient(
+    90deg,
+    hsl(${40 * mouseX + 185}, ${48 + mouseX * 18}%, ${89 + mouseX * 3}%) 0%,
+    hsl(${40 * mouseY + 185}, ${48 + mouseY * 18}%, ${89 + mouseY * 3}%) 100%
+  )`;
+}
+
+let backgroundMouseHandler = null;
+
+function initBackground() {
+  if (backgroundMouseHandler) {
+    window.removeEventListener('mousemove', backgroundMouseHandler);
+    backgroundMouseHandler = null;
+  }
+
+  applyStaticBackground();
+
+  if (prefersReducedMotion()) return;
+
+  backgroundMouseHandler = (e) => {
+    applyInteractiveBackground(
+      e.clientX / window.innerWidth,
+      e.clientY / window.innerHeight
+    );
+  };
+  window.addEventListener('mousemove', backgroundMouseHandler);
+}
+
+function getStoredTheme() {
+  const stored = localStorage.getItem('theme');
+  if (stored === 'light' || stored === 'dark') return stored;
+  return 'auto';
+}
+
+function updateThemeSwitchUI() {
+  const switchEl = document.getElementById('theme-switch');
+  if (!switchEl) return;
+
+  const active = getStoredTheme();
+  document.documentElement.dataset.themeSwitch = active;
+
+  switchEl.querySelectorAll('.theme-switch-option').forEach((btn) => {
+    const isActive = btn.dataset.theme === active;
+    btn.setAttribute('aria-checked', isActive ? 'true' : 'false');
+  });
+}
+
+function applyTheme(stored) {
+  if (stored === 'light' || stored === 'dark') {
+    document.documentElement.dataset.theme = stored;
+    localStorage.setItem('theme', stored);
+  } else {
+    delete document.documentElement.dataset.theme;
+    localStorage.removeItem('theme');
+  }
+  updateThemeSwitchUI();
+  initBackground();
+}
+
+function initTheme() {
+  const stored = localStorage.getItem('theme');
+  if (stored === 'light' || stored === 'dark') {
+    document.documentElement.dataset.theme = stored;
+  }
+  updateThemeSwitchUI();
+  initBackground();
+
+  const switchEl = document.getElementById('theme-switch');
+  if (switchEl) {
+    switchEl.addEventListener('click', (e) => {
+      const btn = e.target.closest('.theme-switch-option');
+      if (!btn) return;
+      applyTheme(btn.dataset.theme === 'auto' ? null : btn.dataset.theme);
+    });
+  }
+
+  window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', () => {
+    if (!localStorage.getItem('theme')) {
+      initBackground();
+      updateThemeSwitchUI();
+    }
+  });
+}
 
 document.addEventListener('alpine:init', () => {
-  Alpine.data('projects', () => ({
-      projects: accordionContent,
-      filters: sortedTags,
-      activeFilter: 'All',
+  Alpine.data('mainPage', () => ({
+    featured: projectsByTier('featured')[0],
+    clientFull: projectsByTier('client-full'),
+    clientCompact: projectsByTier('client-compact'),
+    craftLead: allProjects.find(p => p.tier === 'craft' && p.body),
+    craft: allProjects.filter(p => p.tier === 'craft' && p.summary),
+  }));
+});
 
-      filter(tag){
-        this.activeFilter = tag == this.activeFilter ? 'All' : tag;
-      },
+window.matchMedia('(prefers-reduced-motion: reduce)').addEventListener('change', initBackground);
 
-      filterClass(filter){
-        return this.isActiveFilter(filter) ? 'active' : '';
-      },
-
-      isActiveFilter(filter){
-        return filter == this.activeFilter;
-      },
-
-      showProject(project){
-        if(this.activeFilter == 'All') return true;
-        return project.tags.includes(this.activeFilter);
-      },
-  }))
-
-  Alpine.data('accordion', () => ({
-    open: false,
-    headStyle: {},
-    headHeight: '',
-
-    toggle(){
-      if(!this.open) this.handleOpen();
-      if(this.open) this.handleClose();
-      this.open = !this.open;
-    },
-
-    /**
-     * If clicking on any non-button elements in the head, toggle it open
-     */ 
-    handleAnywhereClick(e){
-      if(e.target.tagName == "BUTTON") return;
-      this.toggle();
-    },
-
-    /**
-     * Resize the accordion head
-     */ 
-    handleOpen(){
-      if(document.body.clientWidth < 600) return;
-      // Store current head height
-      this.headHeight = this.$refs.head.clientHeight;
-      // Set head height to current so we can animate it
-      this.headStyle.height = this.headHeight + 'px';
-
-      // Animate to new height on next tick
-      this.$nextTick(()=>{
-
-        this.headStyle.height = this.headHeight + this.$refs.h3.clientHeight * 0.5 + 'px';
-      });
-
-    },
-
-    /**
-     * Animate the head height to the 'closed' value.
-     */
-    handleClose(){
-      if(document.body.clientWidth < 600) return;
-
-      this.headStyle.height = this.headHeight + 'px';
-
-      setTimeout(()=>{
-        this.headStyle.height = 'auto';
-      },1000)
-    },
-
-    
-  }))
-})
-
-/* Make bg change on mouse move */
-window.addEventListener('mousemove', e => {
-  let mouseY = e.clientY/window.innerHeight;
-  let mouseX = e.clientX/window.innerWidth;
-  document.body.style.background = `linear-gradient(
-    90deg, 
-    hsl(${45*mouseX+150},100%,82%) 0%, 
-    hsl(${45*mouseY+150},100%,82%) 100%
-  )`
-})
-
+document.addEventListener('DOMContentLoaded', () => {
+  initTheme();
+  requestAnimationFrame(() => {
+    document.documentElement.classList.add('theme-switch-ready');
+  });
+});

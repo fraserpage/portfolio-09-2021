@@ -1,197 +1,235 @@
 <!DOCTYPE html>
+
 <head>
   <!-- Primary Meta Tags -->
-  <title>Fraser Page | FULL STACK DEVELOPER</title>
-  <meta name="title" content="Fraser Page | FULL STACK DEVELOPER">
-  <meta name="description" content="I'm a web developer with great attention to detail, deeply honed troubleshooting skills and a strong creative impulse. ">
+  <title>Fraser Page | FULL STACK DEVELOPMENT LEAD</title>
+  <meta name="title" content="Fraser Page | FULL STACK DEVELOPMENT LEAD">
+  <meta name="description"
+    content="Lead full stack developer focused on elegant backend solutions and well-crafted UI. Currently at Springloaded on a national college-access platform supporting 400k+ students.">
 
   <!-- Open Graph / Facebook -->
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://fraser.page">
-  <meta property="og:title" content="Fraser Page | FULL STACK DEVELOPER">
-  <meta property="og:description" content="I'm a web developer with great attention to detail, deeply honed troubleshooting skills and a strong creative impulse. ">
+  <meta property="og:title" content="Fraser Page | FULL STACK DEVELOPMENT LEAD">
+  <meta property="og:description"
+    content="Lead full stack developer focused on elegant backend solutions and well-crafted UI. Currently at Springloaded on a national college-access platform supporting 400k+ students.">
   <meta property="og:image" content="images/social-share.png">
 
   <!-- Twitter -->
   <meta property="twitter:card" content="summary_large_image">
   <meta property="twitter:url" content="https://fraser.page">
-  <meta property="twitter:title" content="Fraser Page | FULL STACK DEVELOPER">
-  <meta property="twitter:description" content="I'm a web developer with great attention to detail, deeply honed troubleshooting skills and a strong creative impulse. ">
+  <meta property="twitter:title" content="Fraser Page | FULL STACK DEVELOPMENT LEAD">
+  <meta property="twitter:description"
+    content="Lead full stack developer focused on elegant backend solutions and well-crafted UI. Currently at Springloaded on a national college-access platform supporting 400k+ students.">
   <meta property="twitter:image" content="images/social-share.png">
 
   <link rel="shortcut icon" type="image/x-icon" href="images/favicon.png">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,100..900;1,9..144,100..900&display=swap" rel="stylesheet">
+  <meta name="color-scheme" content="light dark">
+  <script>
+    (function () {
+      var t = localStorage.getItem('theme');
+      var active = t === 'light' || t === 'dark' ? t : 'auto';
+      if (t === 'light' || t === 'dark') document.documentElement.dataset.theme = t;
+      document.documentElement.dataset.themeSwitch = active;
+    })();
+  </script>
+  <link rel="preload" href="fonts/recursive-latin.woff2" as="font" type="font/woff2" crossorigin>
+  <style>
+    @font-face {
+      font-family: 'Recursive';
+      font-style: oblique 0deg 15deg;
+      font-weight: 300 1000;
+      font-display: block;
+      src: url('fonts/recursive-latin.woff2') format('woff2');
+    }
+
+    html.fonts-pending {
+      visibility: hidden;
+    }
+  </style>
+  <script>
+    (function () {
+      document.documentElement.classList.add('fonts-pending');
+      if (!document.fonts || !document.fonts.load) {
+        document.documentElement.classList.remove('fonts-pending');
+        return;
+      }
+      Promise.race([
+        document.fonts.load('300 1em Recursive'),
+        new Promise(function (resolve) { setTimeout(resolve, 2000); }),
+      ]).finally(function () {
+        document.documentElement.classList.remove('fonts-pending');
+      });
+    })();
+  </script>
   <link rel="stylesheet" href="style.css">
+  <script src="projects-data.js" defer></script>
   <script src="scripts.js" defer></script>
-  <script defer src="https://cdn.jsdelivr.net/npm/@alpinejs/collapse@3.x.x/dist/cdn.min.js"></script>  
+  <script defer src="https://cdn.jsdelivr.net/npm/@alpinejs/collapse@3.x.x/dist/cdn.min.js"></script>
   <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
 </head>
+
 <body>
+  <div class="theme-switch" id="theme-switch" role="radiogroup" aria-label="Color theme">
+    <span class="theme-switch-indicator" aria-hidden="true"></span>
+    <button type="button" class="theme-switch-option" data-theme="light" role="radio" aria-checked="false"
+      aria-label="Light theme">
+      <svg viewBox="0 0 24 24" aria-hidden="true">
+        <circle cx="12" cy="12" r="4" />
+        <path
+          d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M4.93 19.07l1.41-1.41M17.66 6.34l1.41-1.41" />
+      </svg>
+    </button>
+    <button type="button" class="theme-switch-option" data-theme="dark" role="radio" aria-checked="false"
+      aria-label="Dark theme">
+      <svg viewBox="0 0 24 24" aria-hidden="true">
+        <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z" />
+      </svg>
+    </button>
+    <button type="button" class="theme-switch-option" data-theme="auto" role="radio" aria-checked="false"
+      aria-label="System theme">
+      <svg viewBox="0 0 24 24" aria-hidden="true">
+        <rect x="3" y="4" width="18" height="12" rx="2" />
+        <path d="M8 20h8" />
+        <path d="M12 16v4" />
+      </svg>
+    </button>
+  </div>
   <header>
     <img src="images/fraser.jpg" alt="Fraser Page">
     <div>
-      <h1>Hi, I'm Fraser. </h1>
-      <h2>I make stuff on the internet.</h2>
+      <h1>Hi, I'm Fraser.</h1>
+      <h2>I lead product engineering and care about the details.</h2>
+      <p class="location">Toronto, Canada (Remote)</p>
       <p class="lots-a-space">
         <i>Say hi: <a href="mailto:fp@fraser.page?subject=Hi Fraser!">fp@fraser.page</a></i>
       </p>
 
-      <div class="columns" x-data="{more:false, more2:false}">
-        <p>I'm a web developer with great attention to detail and a strong creative impulse. I've been building and playing with code on the internet for something like 15 years now.</p>
-        <div
-          x-show="!more"
-          x-collapse
-        >
-          <button 
-            type="button" 
-            @click="more = true"
-          >
-            Read more
-          </button>
+      <div class="columns" x-data="{ more: false }">
+        <p>I'm a lead full stack developer focused on elegant backend solutions and well-crafted UI. I've been building
+          on the internet for something like 15 years. Currently I'm at <a href="https://springloaded.co"
+            target="_blank" rel="noopener noreferrer">Springloaded</a>, leading development on a national college-access
+          platform used by advisers and program staff to support 400k+ students.</p>
+        <div x-show="!more" x-collapse>
+          <button type="button" @click="more = true">Background</button>
         </div>
         <div x-show="more" x-collapse x-cloak>
-          <p>Most recently I've worked as a WordPress Developer at <a href="http://briteweb.com" target="_blank" rel="noopener noreferrer">Briteweb</a>, a social impact agency and strategic partner, specializing in branding, digital, and marketing solutions for nonprofits, foundations, and purpose-driven companies.</p>
-          <p>Briteweb's clients do amazing things and I was happy to implement many fantastic designs on their behalf.</p>
-          <p>I led internal efforts to improve our code quality, documentation, automate processes, and ensure sites were built to accessible standards.I'm proud of the work I did there.</p>
-          <p>I'm always working to improve my skills and try new things.</p>
-          <div
-            x-show="!more2"
-            x-collapse
-          >
-            <button 
-              type="button"
-              @click="more2 = true"
-            >
-              Read even more
-            </button>
-          </div>
-        </div>
-        <div x-show="more2" x-collapse x-cloak>
-          <p>Before Briteweb, I worked with the talented, detail-driven, and social-good focused designers at <a href="https://rallyrally.design" target="_blank" rel="nofollow">RallyRally</a> (their site is a custom WordPress website built by me) and as a freelancer before that, sometimes doing design, development, and even copywriting as needed.</p>
-          <p>In 2021, I had the opportunity to take some time for myself and enrolled in General Assembly's 3-month, 480+ hour Software Engineering Immersive program to push my skills to another level. I am proud to have completed the course with a perfect 4.0 GPA.</p>
-          <p>Earlier in my career, I worked for Iler Campbell LLP, a law firm servicing co-ops, not-for-profits, charities, and other people working to make the world a little bit better. My title was IT and Marketing Manager, and if that sounds like I wore multiple hats, it's true! I credit this background for giving me great empathy for end-users and deeply honed troubleshooting skills.</p>
-          <p>I pride myself on my adaptability and my ability to do pretty much anything that's needed. At Iler Campbell, that meant doing everything from running network traffic packet-level analyses to making custom illustrations for firm presentations. I'm proud of my work on streamlining business processes. For instance, working with Iler Campbell's accounting department, I took their billing process from a weeks-long endeavor involving an enormous amount of paper-pushing to just a few days and no paper at all. I also found time to fit in some web development work. (Check out the year-in-review site below.)</p>
-          
+          <p>Before Springloaded, I worked as a WordPress developer at <a href="http://briteweb.com" target="_blank"
+              rel="noopener noreferrer">Briteweb</a>, a social impact agency. I led internal efforts to improve code
+            quality, documentation, automation, and accessibility standards.</p>
+          <p>Before that, I worked with designers at RallyRally and as a freelancer — sometimes design, development, and
+            copywriting as needed. Earlier still, I was IT and Marketing Manager at Iler Campbell LLP, a law firm
+            serving co-ops and nonprofits. That background gave me strong empathy for end-users and deeply honed
+            troubleshooting skills — I streamlined their billing process from weeks of paper-pushing to a few paperless
+            days.</p>
           <p>Above all, I love making stuff and learning things along the way.</p>
-
-          <button 
-            type="button" 
-            @click="more = false; more2 = false"
-          >
-            Read less
-          </button>
+          <button type="button" @click="more = false">Read less</button>
         </div>
       </div>
     </div>
   </header>
-  <main x-data="projects">
-    <h2>Here are a few projects I've worked on recently.</h2>
 
-    <!-- Filters -->
-    <div class="filter-list-outer" role="toolbar">
-      <h3 class="filter-title">Explore by tag</h3>
-      <p class="filter-info">I've made an effort to the most relevant tech for each project. A list like this is, by necessity, a little incomplete. <br/>
-      Click on a tag to filter by it. Click again to clear the filter.</p>
-      <ul class="filter-list">
-        <template x-for="tag in filters">
-          <li>
-            <button
-              type="button" 
-              @click="filter(tag.title)"
-              class="filter"
-              :class="filterClass(tag.title)"
-              :aria-pressed="isActiveFilter(tag.title)"
-            >
-              <span x-html="tag.title"></span>
-              <span
-                x-show="tag.count"
-                class="tag-count"
-                x-text="tag.count"
-              ></span>
-            </button>
+  <main x-data="mainPage">
+    <section class="work-section">
+      <h2 class="section-heading">Featured work</h2>
+      <article class="project-card project-card--split">
+        <div class="project-card-inner">
+          <div class="project-card-header">
+            <h3 x-text="featured.title"></h3>
+            <ul class="filter-list" aria-label="tags">
+              <template x-for="tag in featured.tags">
+                <li><span class="filter tag-pill" x-html="tag"></span></li>
+              </template>
+            </ul>
+          </div>
+          <div class="project-card-split">
+            <div class="project-card-main">
+              <div x-html="featured.body"></div>
+              <p x-show="featured.linkNote" x-text="featured.linkNote" class="link-note"></p>
+            </div>
+            <div class="project-card-media">
+              <img :src="`images/${featured.img}`" :alt="featured.title">
+            </div>
+          </div>
+        </div>
+      </article>
+    </section>
+
+    <section class="work-section">
+      <h2 class="section-heading">Selected client work</h2>
+
+      <template x-for="project in clientFull">
+        <article class="project-card project-card--split">
+          <div class="project-card-inner">
+            <div class="project-card-header">
+              <h3 x-text="project.title"></h3>
+              <ul class="filter-list" aria-label="tags">
+                <template x-for="tag in project.tags">
+                  <li><span class="filter tag-pill" x-html="tag"></span></li>
+                </template>
+              </ul>
+            </div>
+            <div class="project-card-split">
+              <div class="project-card-main">
+                <div x-html="project.body"></div>
+                <p x-show="project.link"><a x-text="project.linkText" class="button" :href="project.link"
+                    target="_blank" rel="noopener noreferrer"></a></p>
+              </div>
+              <div class="project-card-media">
+                <img :src="`images/${project.img}`" :alt="project.title">
+              </div>
+            </div>
+          </div>
+        </article>
+      </template>
+
+      <ul class="compact-list">
+        <template x-for="project in clientCompact">
+          <li class="compact-item">
+            <img :src="`images/${project.img}`" :alt="project.title" class="compact-thumb">
+            <div class="compact-content">
+              <strong><a :href="project.link" target="_blank" rel="noopener noreferrer"
+                  x-text="project.title"></a></strong>
+              <span class="compact-summary" x-html="project.summary"></span>
+            </div>
           </li>
         </template>
       </ul>
-    </div>
+    </section>
 
-    <!-- Project list -->
-    <ul id="accordion" class="active">
-      <template x-for="project in projects">
-        <li 
-          x-data="accordion"
-          x-id="['body', 'button']"
-          x-show="showProject(project)" 
-        >
-          <div 
-            class="accordion-head" 
-            x-ref="head"
-            :style="headStyle"
-            :class="open ? 'open' : 'closed'"
-            @click="handleAnywhereClick"
-          >
-            <div>
-              <h3>
-                <button
-                  type="button" 
-                  x-ref="h3"
-                  :id="$id('button')"
-                  x-text="project.title"
-                  @click="toggle()"
-                  :aria-expanded="open"
-                  :aria-controls="$id('body')"
-                ></button>
-              </h3>
-              <ul class="filter-list" aria-label="tags"> 
-                <template x-for="tag in project.tags">
-                  <li>
-                    <button 
-                      type="button" 
-                      @click="filter(tag)" 
-                      x-html="tag"
-                      class="filter"
-                      :class="filterClass(tag)"
-                      :aria-pressed="isActiveFilter(tag)"
-                    ></button>
-                  </li>
-                </template>
-              </ul>
-              
-            </div>
-            <img :src="`images/${project.img}`">
+    <section class="work-section">
+      <h2 class="section-heading">Craft &amp; experiments</h2>
+      <p class="section-intro">Smaller builds where the interesting part was the logic — not the stack.</p>
+      <article class="project-card project-card--media-start" x-show="craftLead">
+        <div class="project-card-inner">
+          <div class="project-card-media">
+            <img :src="`images/${craftLead.img}`" :alt="craftLead.title">
           </div>
+          <div class="project-card-content">
+            <h3 x-text="craftLead.title"></h3>
+            <p x-html="craftLead.body"></p>
+            <p><a x-text="craftLead.linkText" class="button" :href="craftLead.link" target="_blank"
+                rel="noopener noreferrer"></a></p>
+          </div>
+        </div>
+      </article>
+      <ul class="compact-list">
+        <template x-for="project in craft">
+          <li class="compact-item">
+            <a :href="project.link" target="_blank" rel="noopener noreferrer" tabindex="-1" aria-hidden="true">
+              <img :src="`images/${project.img}`" :alt="project.title" class="compact-thumb">
+            </a>
+            <div class="compact-content">
+              <strong><a :href="project.link" target="_blank" rel="noopener noreferrer"
+                  x-text="project.title"></a></strong>
+              <span class="compact-summary" x-html="project.summary"></span>
+            </div>
+          </li>
+        </template>
+      </ul>
+    </section>
 
-          <div
-            :id="$id('body')"
-            :aria-labelledby="$id('button')"
-            class="accordion-body"
-            x-show="open" 
-            x-collapse
-            role="region"
-          >
-            <div class='accordion-left'>
-              <p x-html="project.body" ></p>
-              <p><a 
-                x-text="project.linkText"
-                class='button' 
-                :href="project.link" 
-                target='_blank'
-              ></a></p>
-              <p
-                x-show="project.linkNote"
-                x-text="project.linkNote"
-                class="link-note"
-              ></p>
-            </div>
-            <div class='accordion-right'>
-              <img :src="`images/${project.img}`">
-            </div>
-          </div>
-        </li>
-      </template>
-    </ul>
-    <p>That's it! Thanks for visiting!</p>
+    <p class="sign-off">Thanks for visiting!</p>
   </main>
 </body>

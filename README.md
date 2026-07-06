@@ -1,4 +1,5 @@
-# Hi! This is my portfolio site. 
-Consider it a v0.1. It needs some fun features!
+# Hi! This is my portfolio site.
 
-Deployed at [fraser.page](https://fraser.page). A very nice domain if I may say so myself. 
+The main page highlights current lead full-stack work, selected client projects, and a short craft & experiments section.
+
+Deployed at [fraser.page](https://fraser.page).
