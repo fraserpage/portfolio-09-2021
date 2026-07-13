@@ -5,7 +5,7 @@ const allProjects = [
     title: "A college-access platform at national scale",
     img: "grace.jpg",
     tier: "featured",
-    body: "<strong>Role:</strong> Grew into lead developer and primary client contact.<br/><br/><strong>Scale:</strong> Used nationally by advisers and program staff to support 400k+ students. Student tasks, outreach campaigns, and reporting are driven by each student's data and configurable rules — not fixed workflows.<br/><br/><strong>How I lead:</strong> Linear scoping and prioritization, stakeholder demos, PR review with an emphasis on test coverage, production deployments, release notes, and production issue triage in Sentry.<br/><br/><strong>Shipped highlights:</strong><ul><li>Greenfield student portal with onboarding, profile management, auto-generated college-readiness tasks, and parent-submitted records (deployed; wide release in progress).</li><li>Data Requests approval workflow — students submit applications, scholarships, tests, and financial aid for adviser review before commit, integrated with the task engine and exposed via web UI and AI tools.</li><li>AI assistant with RAG over scoped knowledge bases, function-calling, streaming chat, and adviser escalation.</li><li>AI conversational SMS on Twilio with two-way conversation, campaign-driven outreach, phone verification, and opt-in/out handling (built and deployed; full student rollout pending).</li></ul>",
+    body: "I grew into lead developer and primary client contact on a platform used nationally by advisers and program staff to support 400k+ students. Student tasks, outreach campaigns, and reporting are driven by each student's data and configurable rules — not fixed workflows.<br/><br/>I lead through linear scoping and prioritization, stakeholder demos, PR review with an emphasis on test coverage, production deployments, release notes, and production issue triage in Sentry.<br/><br/><strong>Highlights:</strong><ul><li>Greenfield student portal with onboarding, profile management, auto-generated college-readiness tasks, and parent-submitted records (deployed; wide release in progress).</li><li>Data Requests approval workflow — students submit applications, scholarships, tests, and financial aid for adviser review before commit, integrated with the task engine and exposed via web UI and AI tools.</li><li>AI assistant with RAG over scoped knowledge bases, function-calling, streaming chat, and adviser escalation.</li><li>AI conversational SMS on Twilio with two-way conversation, campaign-driven outreach, phone verification, and opt-in/out handling (built and deployed; full student rollout pending).</li></ul>",
     linkNote: "Private platform — happy to walk through on a call.",
     tags: ["Laravel", "Vue.js", "TypeScript", "Hybridly", "AI", "Twilio", "OpenAI", "Sentry"],
   },
@@ -21,7 +21,7 @@ const allProjects = [
   },
   {
     id: "acumen",
-    title: "Acumen",
+    title: "Interactive map of global programs and portfolio companies",
     img: "acumen.jpg",
     tier: "client-compact",
     summary: "Built a custom WordPress REST API and a multi-component Vue.js <a href='https://acumen.org/where-we-work/' target='_blank'>map app</a> — separate endpoints for programs, portfolio companies, and taxonomy filters, tied to the site's custom post types and ACF data model.",
@@ -30,7 +30,7 @@ const allProjects = [
   },
   {
     id: "artsmidwest",
-    title: "Arts Midwest",
+    title: "Award-winning site with an interactive grantee impact map",
     img: "artsmidwest.jpeg",
     tier: "client-compact",
     summary: "Award-winning WordPress site; built a custom REST API powering the <a href='https://artsmidwest.org/impact/' target='_blank'>impact page</a> — an interactive SVG map with grantee data and story blocks that respond to map state (Alpine.js).",

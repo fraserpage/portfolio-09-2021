@@ -112,7 +112,7 @@
             target="_blank" rel="noopener noreferrer">Springloaded</a>, leading development on a national college-access
           platform used by advisers and program staff to support 400k+ students.</p>
         <div x-show="!more" x-collapse>
-          <button type="button" @click="more = true">Background</button>
+          <button type="button" @click="more = true">Read more</button>
         </div>
         <div x-show="more" x-collapse x-cloak>
           <p>Before Springloaded, I worked as a WordPress developer at <a href="http://briteweb.com" target="_blank"
@@ -189,8 +189,9 @@
           <li class="compact-item">
             <img :src="`images/${project.img}`" :alt="project.title" class="compact-thumb">
             <div class="compact-content">
-              <strong><a :href="project.link" target="_blank" rel="noopener noreferrer"
-                  x-text="project.title"></a></strong>
+              <h3 class="compact-title">
+                <a :href="project.link" target="_blank" rel="noopener noreferrer" x-text="project.title"></a>
+              </h3>
               <span class="compact-summary" x-html="project.summary"></span>
             </div>
           </li>
@@ -217,12 +218,14 @@
       <ul class="compact-list">
         <template x-for="project in craft">
           <li class="compact-item">
-            <a :href="project.link" target="_blank" rel="noopener noreferrer" tabindex="-1" aria-hidden="true">
+            <a :href="project.link" target="_blank" rel="noopener noreferrer" class="compact-thumb-link"
+              tabindex="-1" aria-hidden="true">
               <img :src="`images/${project.img}`" :alt="project.title" class="compact-thumb">
             </a>
             <div class="compact-content">
-              <strong><a :href="project.link" target="_blank" rel="noopener noreferrer"
-                  x-text="project.title"></a></strong>
+              <h3 class="compact-title">
+                <a :href="project.link" target="_blank" rel="noopener noreferrer" x-text="project.title"></a>
+              </h3>
               <span class="compact-summary" x-html="project.summary"></span>
             </div>
           </li>
