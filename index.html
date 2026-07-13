@@ -100,32 +100,19 @@
     <img src="images/fraser.jpg" alt="Fraser Page">
     <div>
       <h1>Hi, I'm Fraser.</h1>
-      <h2>I lead product engineering and care about the details.</h2>
+      <h2>I like making things.</h2>
       <p class="location">Toronto, Canada (Remote)</p>
       <p class="lots-a-space">
         <i>Say hi: <a href="mailto:fp@fraser.page?subject=Hi Fraser!">fp@fraser.page</a></i>
       </p>
 
       <div class="columns" x-data="{ more: false }">
-        <p>I'm a lead full stack developer focused on elegant backend solutions and well-crafted UI. I've been building
-          on the internet for something like 15 years. Currently I'm at <a href="https://springloaded.co"
-            target="_blank" rel="noopener noreferrer">Springloaded</a>, leading development on a national college-access
-          platform used by advisers and program staff to support 400k+ students.</p>
-        <div x-show="!more" x-collapse>
-          <button type="button" @click="more = true">Read more</button>
-        </div>
-        <div x-show="more" x-collapse x-cloak>
-          <p>Before Springloaded, I worked as a WordPress developer at <a href="http://briteweb.com" target="_blank"
-              rel="noopener noreferrer">Briteweb</a>, a social impact agency. I led internal efforts to improve code
-            quality, documentation, automation, and accessibility standards.</p>
-          <p>Before that, I worked with designers at RallyRally and as a freelancer — sometimes design, development, and
-            copywriting as needed. Earlier still, I was IT and Marketing Manager at Iler Campbell LLP, a law firm
-            serving co-ops and nonprofits. That background gave me strong empathy for end-users and deeply honed
-            troubleshooting skills — I streamlined their billing process from weeks of paper-pushing to a few paperless
-            days.</p>
-          <p>Above all, I love making stuff and learning things along the way.</p>
-          <button type="button" @click="more = false">Read less</button>
-        </div>
+        <p>I’ve spent the last twenty-ish years building software, websites, tools, and the occasional unnecessary
+          interactive experiment.</p>
+        <p>Sometimes they’re used by hundreds of advisers supporting students across the United States.</p>
+        <p>Sometimes they’re just for making my wife smile when our wedding invitations open. (I mean, also, this makes
+          me smile too.)</p>
+        <p>Either way, I’m happiest when I’m solving interesting problems and obsessing over the details.</p>
       </div>
     </div>
   </header>
@@ -218,8 +205,8 @@
       <ul class="compact-list">
         <template x-for="project in craft">
           <li class="compact-item">
-            <a :href="project.link" target="_blank" rel="noopener noreferrer" class="compact-thumb-link"
-              tabindex="-1" aria-hidden="true">
+            <a :href="project.link" target="_blank" rel="noopener noreferrer" class="compact-thumb-link" tabindex="-1"
+              aria-hidden="true">
               <img :src="`images/${project.img}`" :alt="project.title" class="compact-thumb">
             </a>
             <div class="compact-content">
